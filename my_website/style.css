@@ -1,0 +1,135 @@
+/* ベース設定 すべての要素 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*ページ全体の設定*/
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+  background-color: #f8f5f2;
+  color: #3b322c;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ヘッダー */
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background-color: #f0eae5;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #b65c38;
+  margin-bottom: 10px;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #5a4b42;
+}
+
+/* セクション共通 */
+section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #b65c38;
+}
+section p, section ul {
+  font-size: 1rem;
+  color: #3b322c;
+}
+section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* About セクション */
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+#about img {
+  width: 150px;
+}
+#about div {
+  flex: 1;
+}
+
+/* フッター Contact */
+footer {
+  background-color: #f0eae5;
+  padding: 40px 20px;
+  text-align: center;
+}
+#contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #b65c38;
+}
+#contact a {
+  color: #b65c38;
+  text-decoration: none;
+  font-weight: bold;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/*連絡*/
+.btn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 7px 10px 10px 10px;
+  text-decoration: none;
+  color: #f0eae5;
+  background: #b65c38;
+  transition: .4s;
+}
+
+
+.btn > span {
+  border-bottom: solid 2px #f0eae5;
+}
+
+.btn:hover {
+  background: #384fb6;
+}
+
+
+/* アニメーション */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
